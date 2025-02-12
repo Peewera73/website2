@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>ส่วนเนื้อหา</title>
+</head>
+<body bgcolor="DDD5F3"><br><br>
+<center><b><font color="black" size="6">หน่วยที่ 8 การเขียนโปรแกรมอย่างง่ายด้วยภาษาซี</b></center></font><br>
+<b><font color="black" size="5">หลักการเขียนโปรแกรมภาษาซี</b></font><br>
+		<ol type="1">
+			<li><b><font color="black" size="4"> การสร้างโปรแกรม (Source Code)</b><font color="black" size="4">ภาษาซีสามารถใช้โปรแกรมเอดิเตอร์ (เช่น Notepad) เพื่อสร้างโปรแกรมและบันทึกไฟล์ให้มี นามสกุลเป็น .c หรือ .cpp เช่น mysource.cpp</font><br><br></li> 
+			<li><b><font color="black" size="4"> การคอมไพล์โปรแกรม (Compile)</b><font color="black" size="4"> เมื่อโปรแกรมถูกสร้างขึ้น ลําดับต่อไปคือการคอมไพล์โปรแกรมเพื่อตรวจสอบข้อผิดพลาด</font><br><br></li> 
+			<li><b><font color="black" size="4"> การเชื่อมโยงโปรแกรม (Link) </b><font color="black" size="4">เมื่อได้ออบเจ็กต์ไฟล์ซึ่งเป็นภาษาเครื่องแล้ว ขั้นตอนต่อไปคือ การลิงก์ด้วยการนําออบเจ็กต์ ไฟล์เชื่อมโยงกับไลบรารี</font><br><br></li> 
+			<li><b><font color="black" size="4"> การสั่งรันโปรแกรม (Run) </b><font color="black" size="4">เมื่อได้เอ็กซีคิวต์ไฟล์แล้ว ไฟล์ดังกล่าวสามารถเรียกใช้งาน (ดับเบิ้ลคลิกที่ชื่อไฟล์) เพื่อสั่งรันหรือ ประมวลผลโปรแกรมได้ทันทำ</font><br><br></li> 
+		</ol>
+<b><font color="black" size="5">กฎเกณฑ์การเขียนโปรแกรมภาษาซี</b></font><br>
+		<ol type="1">	
+			<li><font color="black" size="4"> ที่ส่วนหัวโปรแกรมต้องกําหนดตัวประมวลผล (Preprocessor) ก่อนเสมอ ตัวอย่างเช่น การผนวก เฮดเดอร์ไฟล์อย่าง #include เพื่อใช้งานฟังก์ชันเกี่ยวกับการอินพุตหรือเอาต์พุตข้อมูล เป็นต้น</font><br><br></li>
+			<li><font color="black" size="4">ชุดคําสั่งต่าง ๆ ใช้อักษรตัวพิมพ์เล็ก</font><br><br></li>
+			<li><font color="black" size="4">ตัวแปรที่ใช้งานภายในโปรแกรม ต้องถูกประกาศพร้อมระบุชนิดข้อมูลไว้เสมอ</font><br><br></li>
+			<li><font color="black" size="4">ภายในโปรแกรมต้องมีอย่างน้อยหนึ่งฟังก์ชัน คือฟังก์ชัน main ()</font><br><br></li>
+			<li><font color="black" size="4">ใช้เครื่องหมาย { (Left Brace) เพื่อบอกจุดเริ่มต้นของชุดคําสั่ง และเครื่องหมาย } เพื่อบอกจุดสิ้นสุด ของชุดคําสั่ง โดยสามารถมีเครื่องหมาย { } (Braces) ซ้อนอยู่ภายในได้</font><br><br></li>
+			<li><font color="black" size="4">สิ้นสุดของแต่ละประโยคคําสั่ง ต้องจบด้วยเครื่องหมาย ; (Semicolon)เสมอ</font><br><br></li>
+			<li><font color="black" size="4">สามารถใช้เครื่องหมาย /* comment */ หรือ // comment</font><br><br></li>
+		</ol>
+<b><font color="black" size="5">อักขระในภาษาซี</b></font><br>
+<font color="black" size="4">โปรแกรมภาษาซีมีกลุ่มอักขระต่าง ๆ ให้ใช้งานที่เรียกว่า Character Sets โดยแบ่งเป็น 2 กลุ่มใหญ่ๆ คือ ชุดอักขระพื้นฐานและชุดอักขระเพื่อการประมวลผล</font><br><br>
+<b><font color="black" size="4">ชุดอักขระพื้นฐาน (Basic Character Set) แบ่งเป็น 5 กลุ่ม คือ</b></font><br>
+		<ol type="1">
+			<li><font color="black" size="4">อักษรตัวพิมพ์ใหญ่ (Alphabets Upper Case) ได้แก่ตัวอักษร A–Z จํานวน 26 ตัว</font><br><br>
+			<li><font color="black" size="4">อักษรตัวพิมพ์เล็ก (Alphabets Lower Case) ได้แก่ตัวอักษร a–z จํานวน 26 ตัว</font><br><br>
+			<li><font color="black" size="4">ตัวเลข (Decimal Digits) ได้แก่ตัวเลข 0–9 จํานวน 10 ตัว</font><br><br>
+			<li><font color="black" size="4">ตัวสัญลักษณ์พิเศษ (Special Symbols) ได้แก่ สัญลักษณ์พิเศษต่าง ๆ จํานวน 29 ตัว</font><br><br>
+			<li><font color="black" size="4">ตัวอักขระที่เป็นช่องว่าง (Whitespace Characters) ได้แก่ ช่องว่างในรูปแบบต่าง ๆ จํานวน 5 ชนิด</font><br><br>
+		</ol>
+<center><img src="E:\Website-ฑิฆัมพร\images\อักขระ.png"align="bottom" height="380" width="480"></center><br><br>
+<b><font color="black" size="5">ชุดอักขระเพื่อการประมวลผล (Execution Character Set) </b></font><br>
+<font color="black" size="4">ชุดอักขระเพื่อการประมวลผลแบ่งเป็น 2 กลุ่ม คือ </font><br><br>
+		<ol type="1">
+			<li><font color="black" size="4"> อักขระที่เป็นค่าว่าง (Null Character) </b><font color="black" size="4">อักขระที่เป็นค่าว่าง หรือค่า Null จะใช้สัญลักษณ์ \0 ซึ่งเป็นตัวกําหนดจุดสิ้นสุดของอักษรสตริง (Character String) </font><br><br></li> 
+			<li><font color="black" size="4"> อักขระควบคุม (Escape Sequence) </b><font color="black" size="4">เป็นรหัสที่ใช้ควบคุมการแสดงผลทั้งทางจอภาพ และเครื่องพิมพ์ซึ่งกลุ่มของอักขระควบคุมประกอบด้วย</font><br><br></li> 
+		</ol>
+<center><img src="E:\Website-ฑิฆัมพร\images\ชื่อเรียก.png"align="bottom" height="300" width="480"></center><br><br>
+<b><font color="black" size="5">ค่าคงที่ตัวแปรและชนิดข้อมลู และคําเฉพาะ</b></font><br>
+		<ol type="1">
+			<li><b><font color="black" size="4">ค่าคงที่ (Constants) </b><font color="black" size="4">ตัวอักษร ตัวเลข และสัญลักษณ์พิเศษต่าง ๆ เมื่อนํามาประกอบรวมเข้าด้วยกัน จะเกิดคําขึ้นมา ที่สามารถใช้แทนความหมายในรูปของค่าคงที่ ตัวแปรและชนิดข้อมูล</font><br><br></li>
+			<li><b><font color="black" size="4">ตัวแปรและชนิดข้อมูล</b><font color="black" size="4">ตัวแปรที่ใช้งานในโปรแกรมภาษาซีต้องถูกประกาศขึ้นมาพร้อมระบุชนิดข้อมูล เพื่อให้ทราบว่า ตัวแปรเหล่านั้นจัด</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ชนิดข้อมูล.png"align="bottom" height="200" width="350"></center><br><br>
+			<li><b><font color="black" size="4">คําเฉพาะ (C Keywords) </b><font color="black" size="4">คําเฉพาะ คือ คําที่ถูกสงวนไว้ในคอมไพเลอร์จึงไม่สามารถนําคําเฉพาะเหล่านี้ไปใช้เพื่อตั้งชื่อ ตัวแปรได้ในภาษาซีมีคําเฉพาะ</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\คอมไพเลอร์.png"align="bottom" height="250" width="300"></center><br><br>		
+		</ol>		
+<b><font color="black" size="5">นิพจน์และตัวดําเนินการ</b></font><br>
+<font color="black" size="4">คือ นิพจน์ทางคณิตศาสตร์ซึ่งสามารถพบเห็นได้จากสูตรการคํานวณ ตัวเลขต่าง ๆ ดังนั้น นิพจน์จึงประกอบด้วย ตัวแปร ค่าคงที่ และตัวดําเนินการทางคณิตศาสตร์มาประกอบรวมกัน</font><br><br>
+<b><font color="black" size="5">ตัวดําเนินการในภาษาซีมีหลายชนิด ในที่นี้จะกล่าวถึงตัวดําเนินการที่สําคัญดังต่อไปนี้</b></font><br>
+		<ol type="1">
+			<li><b><font color="black" size="4">ตัวดําเนินการทางคณิตศาสตร์</b><font color="black" size="4">ตัวดําเนินการทางคณิตศาสตร์ในภาษาซีมีอยู่ 5 ตัว คือ </font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ตัวดำเนินการ.png"align="bottom" height="200" width="350"></center><br><br>			
+			<li><b><font color="black" size="4">ตัวดําเนินการยูนารี </b><font color="black" size="4">ภาษาซียังมีตัวดําเนินการแบบยูนารีที่นํามาใช้เพื่อสร้างค่าใหม่ขึ้นมา สําหรับตัวดําเนินการยูนารี แบบทั่วไปคือ ตัวดําเนินการยูนารีติดลบ เช่น ค่าตัวเลข 99 เมื่อนําตัวดําเนินการยูนารีติดลบมาใช้จะทําให้ค่า เปลี่ยนไปเป็นค่าติดลบทันทีคือ –99 อย่างไรก็ตาม ตัวดําเนินการยูนารีติดลบดังกล่าว มิใช่ตัวดําเนินการลบแต่ อย่างใด </font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\นิพจน์.png"align="bottom" height="200" width="550"></center><br><br>
+			<li><b><font color="black" size="4">ตัวดําเนินการเปรียบเทียบและตรรกะ </b><font color="black" size="4">ตัวดําเนินการเปรียบเทียบในภาษาซีประกอบด้วย</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ตรรกะ.png"align="bottom" height="250" width="380"></center><br><br>	
+			<li><b><font color="black" size="4">ตัวดําเนินการระดับบิต </b><font color="black" size="4">ภาษาซียังรวมดําเนินการระดับบิตในการจัดการกับข้อมูลภายในได้เช่นเดียวกับภาษาระดับต่ํา อย่างแอสเซมบลีซึ่งประกอบด้วย</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\บิต.png"align="bottom" height="250" width="380"></center><br><br>	
+			<li><b><font color="black" size="4">ตัวดําเนินการกําหนดค่า</b><font color="black" size="4">ในภาษาซีมีหลายวิธีด้วยกันในการกําหนดค่าให้กับตัวแปร ซึ่งปกติตัวดําเนินการกําหนด ค่า มักจะใช้เครื่องหมายเท่ากับ = และสามารถนําไปใช้กับการกําหนดสูตรคํานวณต่าง ๆ</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\บิต.png"align="bottom" height="250" width="380"></center><br><br>
+			<li><b><font color="black" size="4">ตัวดําเนินการเงื่อนไข </b><font color="black" size="4">ตัวดําเนินการเงื่อนไขจะนํามาใช้เพื่อทดสอบค่านิพจน์ทางตรรกะ ว่าจริงหรือเท็จ โดยมีรูปแบบ ดังนี้</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\รูปแบบ.png"align="bottom" height="100" width="400"></center><br><br>
+			<li><b><font color="black" size="4">ลําดับความสําคัญของตัวดําเนินการ </b><font color="black" size="4">ตัวดําเนินการแต่ละตัวจะมีลําดับความสําคัญก่อนหลังที่แตกต่างกัน โดยการประมวลผลจะ กระทํากับตัวดําเนินการที่มีลําดับความสําคัญก่อน แต่ถ้ากรณีที่มีลําดับความสําคัญเท่ากัน ตามปกติจะกระทํา กับตัวดําเนินการจากซ้ายไปขวา โดยลําดับความสําคัญของตัวดําเนินการพื้นฐานเป็นดังนี้</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ลำดับความสำคัญ.png"align="bottom" height="250" width="450"></center><br><br>
+		</ol>
+		<b><font color="black" size="5">ขั้นตอนการติดตั้งโปรแกรม Dev–Cpp เวอร์ชัน 5.4.1</b></font><br>
+<font color="black" size="4">สําหรับการเขียนโปรแกรมภาษาซี นั้นสามารถใช้งานเอดิเตอร์ได้หลายตัว เช่น Notepad, EditPlus, Turbo C++, NetBeans, Visual Studio และ Dev–Cpp เป็นต้น โปรแกรม Dev–Cpp 5.4.1 สามารถนํามา เขียนภาษาซีและ ภาษา C++ ได้ซึ่งโปรแกรมมีลักษณะเด่นคือ มีขนาดเล็กเมื่อเทียบกับโปรแกรม NetBeans, Visual Studio และสําหรับการติดตั้งโปรแกรม Dev–Cpp 5.4.1 มีขั้นตอนการติดตั้งและการใช้งานโปรแกรม ดังต่อไปนี้ </font><br><br>
+		<ol type="1">
+			<li><font color="black" size="4">เปิดเครื่องคอมพิวเตอร์และเชื่อมต่ออินเทอร์เน็ต จากนั้นเข้าไปที่เว็บเบราร์เซอร์ Google แล้วค้นหา คําว่า “Dev–Cpp 5.4.1 download”</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ค้นหาโปรแกรม.png"align="bottom" height="250" width="450"></center><br><br>
+			<li><font color="black" size="4">เมื่อดาวน์โหลดเสร็จแล้ว ในที่นี้ให้นําโปรแกรมดังกล่าวจัดเก็บไว้ที่โฟลเดอร์ C:\Dev–Cpp 5.4.1</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\จัดเก็บไฟล์.png"align="bottom" height="250" width="450"></center><br><br>
+			<li><font color="black" size="4">ทําการแตกไฟล์ด้วยการคลิกขวาที่ชื่อไฟล์แล้วเลือกรายการ Extract Here (ในที่นี้ใช้โปรแกรม WinRAR) </font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\การแตกไฟล์.png"align="bottom" height="250" width="400"></center><br><br>
+			<li><font color="black" size="4">จากนั้นดับเบิลคลิกที่ไฟล์ โปรแกรม Dev–Cpp 5.4.1 MinGW 4.7.2 Setup เพื่อเริ่มการติดตั้ง โปรแกรม</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\การติดตั้งโปรแกรม.png"align="bottom" height="250" width="450"></center><br><br>
+			<li><font color="black" size="4">โปรแกรมจะทําการคลายการบีบอัดข้อมูลในการติดตั้งโปรแกรม และแสดงเมนูให้ผู้ใช้เลือกภาษาใน การติดตั้ง โดยทําการเลือกเป็นภาษาอังกฤษ (English) แล้วคลิกปุ่ม OK </font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\เลือกภาษา.png"align="bottom" height="250" width="450"></center><br><br>
+			<li><font color="black" size="4">โปรแกรมแสดงข้อตกลงในการใช้งานโปรแกรม Dev–C++ 5.4.1 และการยินยอมในการใช้งานตาม ข้อตกลง โดยผู้ใช้ต้องยอมรับข้อตกลงในการใช้งาน คลิกปุ่ม I Agree</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ยอมรับข้อตกลง.png"align="bottom" height="250" width="400"></center><br><br>
+			<li><font color="black" size="4">เลือกส่วนประกอบในการติดตั้งและใช้งานโปรแกรม โดยผู้ใช้สามารถเลือกการติดตั้งแบบเต็มเวอร์ชัน หรือบางส่วนก็ได้ขึ้นอยู่กับความต้องการใช้งาน แต่ในที่นี้ให้เลือก Full และ คลิกปุ่ม Next > สําหรับการติดตั้ง ขั้นตอนต่อไป</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\การใช้งาน.png"align="bottom" height="250" width="400"></center><br><br>
+			<li><font color="black" size="4">เลือกตําแหน่งในการติดตั้งโปรแกรม Dev–C++ 5.4.1 โดยถ้าไม่มีการเปลี่ยนตําแหน่งในการติดตั้งจะ ทําการติดตั้งตามตําแหน่งดังภาพที่ 8.10 แต่ถ้าต้องการเปลี่ยนตําแหน่งในการติดตั้ง ผู้ใช้งานสามารถกดเลือก ปุ่ม Browse เพื่อเลือกตําแหน่งที่ต้องการติดตั้งได้ถ้าไม่มีการเปลี่ยนตําแหน่งในการติดตั้งให้คลิกปุ่ม Install เพื่อเริ่มการติดตั้งโปรแกรม</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ตำแหน่ง.png"align="bottom" height="250" width="400"></center><br><br>
+			<li><font color="black" size="4">โปรแกรมจะดําเนินการติดตั้งโปรแกรม Dev–C++ 5.4.1 และรอจนกว่าการติดตั้งโปรแกรมสําเร็จ</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\การดำเนินการ.png"align="bottom" height="250" width="400"></center><br><br>
+			<li><font color="black" size="4">เมื่อโปรแกรมดําเนินการติดตั้งเสร็จเรียบร้อยแล้วจะแสดงหน้าต่างการติดตั้งโปรแกรมที่สมบูรณ์</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\เสร็จ.png"align="bottom" height="350" width="400"></center><br><br>
+			<li><font color="black" size="4">เมื่อผู้ใช้คลิกปุ่ม Finish จะเป็นการสิ้นสุดการติดตั้งโปรแกรม และเปิดโปรแกรมขึ้นมาใช้งานทันที พร้อมทั้งปรากฏไอคอน Dev–C++ บนเดสก์ท็อป</font><br><br></li> 
+<center><img src="E:\Website-ฑิฆัมพร\images\ผลการติดตั้ง.png"align="bottom" height="350" width="400"></center><br><br>
+		</ol>
+<b><font color="black" size="5">การเขียนโปรแกรม การตรวจสอบ และการแก้ไขโปรแกรม</b></font><br>
+<font color="black" size="4">เมื่อติดตั้งโปรแกรม Dev–C++ 5.4.1 เสร็จ นั่นหมายความว่า พร้อมที่จะทําการเขียนโปรแกรมได้โดย ในที่นี้ให้ทดลองเขียนโปรแกรมเพื่อแสดงชื่อตนเอง “My name is My name is Mr. Settaphun Suksai” </font><br><br>
+<b><font color="black" size="5">การเขียนโปรแกรม </b></font><br>
+		<ol type="1">
+			<li><font color="black" size="4">ให้ผู้ใช้ดําเนินการเปิดโปรแกรมโดยดับเบิลคลิกไอคอน Dev–C++ บนเดสก์ท็อป </font><br><br></li>
+			<li><font color="black" size="4">จากนั้นโปรแกรม Dev–C++ 5.4.1 จะเปิดโปรแกรมขึ้นมาให้พร้อมในการใช้งาน</font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\หน้าต่างโปรแกรม.png"align="bottom" height="350" width="400"></center><br><br>
+			<li><font color="black" size="4">ในการเริ่มต้นการเขียนโปรแกรมนั้นผู้ใช้สามารถเลือกเขียนโปรแกรม Dev–C++ ในรูปแบบ ของ Source File หรือ Project ได้โดยใช้เมาส์คลิกเลือกเมนู File > New</font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\การเปิดโปรแกรม.png"align="bottom" height="200" width="450"></center><br><br>
+			<li><font color="black" size="4">ในกรณีเลือกเขียนโปรแกรมแบบ Source File โปรแกรมจะเปิดไฟล์ชื่อ Untitled1 มาให้ อัตโนมัติและให้เขียนโปรแกรม</font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\ตัวอย่างการพิมพ์.png"align="bottom" height="350" width="400"></center><br><br>
+			<li><font color="black" size="4">จัดเก็บไฟล์คลิกเมนู File > Save AS แล้วคลิกเลือกแหล่งเก็บไฟล์ C:\Coding </font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\การจัดเก็บไฟล์.png"align="bottom" height="350" width="400"></center><br><br>
+		</ol>
+<b><font color="black" size="5">การตรวจสอบ</b></font><br>
+<font color="black" size="4">การตรวจสอบโปรแกรมให้คลิกเมนู Execute > Compile หรือ กดแป้นคีย์ F9 เพื่อ คอมไพล์โปรแกรมจะพบว่าเกิดข้อผิดพลาด แจ้งข้อผิดพลาดว่าไม่รู้จัก</font><br><br>
+		<ol type="1">			
+			<li><b><font color="black" size="4">การแก้ไขโปรแกรม</b><font color="black" size="4">เมื่อเกิดข้อผิดพลาดโปรแกรมจะไม่สามารถรันได้ดังนั้นต้องเข้าไปแก้ไขคําสั่งในโปรแกรมก่อน ซึ่งจะพบว่าในบรรทัดที่ 4 มีการเขียนคําสั่งผิด ให้แก้ไขจาก P ตัวพิมพ์ใหญ่ มาเป็น p ตัวพิมพ์เล็ก แล้วทําการ ตรวจสอบโปรแกรมอีกครั้ง ซึ่งจะพบว่า ไม่พบข้อผิดพลาด แล้วให้คลิกปุ่ม Close</font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\การตรวจสอบ.png"align="bottom" height="350" width="400"></center><br><br>
+			<li><b><font color="black" size="4">การรันโปรแกรม</b><font color="black" size="4">สั่งรันโปรแกรมให้คลิกที่ เมนู Execute > Run หรือ กดแป้นคีย์ F10 , หลังจากรันโปรแกรมแล้ว ทดลองเข้าไปยังโฟลเดอร์ C:\Coding จะพบไฟล์ ex01 สกุลต่าง ๆ โดยเฉพาะไฟล์ ex01.exe (Application) ซึ่งเป็นเอ็กซีคิวต์ไฟล์ที่สามารถดับเบิลคลิกเพื่อสั่งรันโปรแกรมดังกล่าวได้ทันที </font><br><br></li>
+<center><img src="E:\Website-ฑิฆัมพร\images\การรัน.png"align="bottom" height="200" width="400"></center><br><br>
+<center><img src="E:\Website-ฑิฆัมพร\images\ผลการรัน.jpg"align="bottom" height="150" width="400"></center><br><br>
+<center><img src="E:\Website-ฑิฆัมพร\images\ไฟล์.png"align="bottom" height="150" width="400"></center><br><br>
+		</ol>
+		
+<b><font color="black" size="5">ชนิดของข้อผิดพลาด</b></font><br>
+		<ol type="1">			
+			<li><b><font color="black" size="4">ข้อผิดพลาดที่เกิดจากไวยากรณ์ (Syntax Errors) </b><font color="black" size="4">ข้อผิดพลาดชนิดนี้เกิดจากการใช้ไวยากรณ์หรือรูปแบบภาษาที่ผิด เช่น สะกดคําสั่งผิดแทนที่ จะต้องพิมพ์คําสั่งว่า printf ก็เป็น Printf เป็นต้น ซึ่งเมื่อผ่านการแปลแล้ว ตัวแปลภาษาจะไม่รู้จักคําสั่งดังกล่าว อย่างไรก็ตามข้อผิดพลาดที่เกิดจากไวยากรณ์นั้น ตรวจสอบได้ง่าย เนื่องจากคอมไพเลอร์สามารถตรวจพบและ แจ้งข้อผิดพลาดที่เกิดขึ้นให้รับทราบทันที </font><br><br></li>
+			<li><b><font color="black" size="4">ข้อผิดพลาดที่เกิดจากตรรกะโปรแกรม (Logic Errors) </b><font color="black" size="4">ข้อผิดพลาดชนิดนี้จัดเป็นข้อผิดพลาดที่เกิดจากโปรแกรมเมอร์เช่น การใช้ตรรกะในการสร้าง เงื่อนไขที่ผิดพลาดหรือการสร้างสูตรคํานวณที่ผิด ส่งผลให้ผลลัพธ์ผิดพลาดไม่ตรงกับความเป็นจริง เช่น เงื่อนไข ที่ต้องการสร้าง คือ ถ้าคะแนนรวม >= 80 จะได้เกรด A แต่กลับสร้างเงื่อนไขเป็น ถ้าคะแนน > 80 จะได้เกรด A จึงส่งผลให้นักศึกษาที่มีคะแนน 80 ไม่ได้เกรด A ที่สําคัญ ข้อผิดพลาดชนิดนี้คอมไพเลอร์จะไม่สามารถตรวจ พบได้เพราะชุดคําสั่งไม่ได้เขียนผิดรูปแบบแต่อย่างใด ดังนั้น สูตรคํานวณต่าง ๆ จําเป็นต้องได้รับการทดสอบ ความถูกต้องผ่านการป้อนข้อมูลในรูปแบบต่าง ๆ ซ้ำแล้วซ้ำเล่า จนมั่นใจว่าได้ผลลัพธ์ที่ถูกต้อง </font><br><br></li>
+			<li><b><font color="black" size="4">ข้อผิดพลาดในขณะรันโปรแกรม (Runtime Errors) </b><font color="black" size="4">สําหรับข้อผิดพลาดแบบ Runtime นั้น คอมไพเลอร์จะไม่สามารถตรวจพบได้เนื่องจากรูปแบบ คําสั่งไม่ได้ผิดพลาดแต่อย่างใด ครั้นเมื่อข้อผิดพลาดชนิดนี้ถูกตรวจพบ โปรแกรมจะหยุดการทํางานทันที ตัวอย่างข้อผิดพลาดชนิดนี้เช่น กรณีสูตรคํานวณที่สร้างขึ้น บังเอิญว่ามีตัวหารเป็นศูนย์ซึ่งโดยปกติแล้วค่าใดๆ ก็ตามเมื่อหารด้วยศูนย์ผลลัพธ์ที่ได้คือ ค่าอนันต์ดังนั้น วิธีป้องกันข้อผิดพลาดจากกรณีนี้คือ ควรเขียน โปรแกรมสร้างเงื่อนไขเพื่อตรวจสอบค่าที่นํามาใช้เป็นตัวหาร ถ้ามีค่าเท่ากับศูนย์จะไม่นํามาคํานวณ แล้วแจ้ง ข้อความให้ผู้ใช้รับทราบทางจอภาพ</font><br><br></li>
+		</ol>
+<b><font color="black" size="5">สรุปหน่วยที่ 8</b></font><br>
+<b><font color="black" size="4">หลักการเขียนโปรแกรมภาษาซี ประกอบด้วยขั้นตอนต่อไปนี้ </b></font><br>
+		<ol type="1">
+			<li><font color="black" size="4"> การสร้างโปรแกรม (Source Code) </font><br><br></li>
+			<li><font color="black" size="4">การคอมไพล์โปรแกรม (Compile) </font><br><br></li>
+			<li><font color="black" size="4">การเชื่อมโยงโปรแกรม (Link) </font><br><br></li>
+			<li><font color="black" size="4">การสั่งรันโปรแกรม (Run) </font><br><br></li>
+		</ol>
+<b><font color="black" size="4">กฎเกณฑ์การเขียนโปรแกรมภาษาซี</b></font><br>
+		<ol type="1">
+			<li><font color="black" size="4"> ที่ส่วนหัวโปรแกรมต้องกําหนดตัวประมวลผล (Preprocessor) ก่อนเสมอ</font><br><br></li>
+			<li><font color="black" size="4">ชุดคําสั่งต่าง ๆ ใช้อักษรตัวพิมพ์เล็ก</font><br><br></li>
+			<li><font color="black" size="4"> ตัวแปรที่ใช้งานภายในโปรแกรม ต้องถูกประกาศพร้อมระบุชนิดข้อมูลไว้เสมอ</font><br><br></li>
+			<li><font color="black" size="4"> ภายในโปรแกรมต้องมีอย่างน้อยหนึ่งฟังก์ชัน ก็คือฟังก์ชัน main () </font><br><br></li>
+			<li><font color="black" size="4"> ใช้เครื่องหมาย { เพื่อบอกจุดเริ่มต้นของชุดคําสั่ง และเครื่องหมาย } เพื่อบอกจุดสิ้นสุดของชุดคําสั่ง โดยสามารถมีเครื่องหมาย { } ซ้อนอยู่ภายในได้</font><br><br></li>
+			<li><font color="black" size="4"> สิ้นสุดของแต่ละประโยคคําสั่ง ต้องจบด้วยเครื่องหมาย ; เสมอ</font><br><br></li>
+			<li><font color="black" size="4">  สามารถใช้เครื่องหมาย /* comment */ หรือ // comment เพื่อระบุหมายเหตุ ภายในโปรแกรม โดยส่วนนี้จะถูกนําไปประมวลผล</font><br><br></li>
+		</ol>
+<b><font color="black" size="4">อักขระในภาษาซี </b></font><br>
+		<ol type="1">			
+			<li><font color="black" size="4">ชุดอักขระพื้นฐาน แบ่งเป็น อักษรตัวพิมพ์ใหญ่อักษรตัวพิมพ์เล็ก ตัวเลข ตัวสัญลักษณ์พิเศษ และตัว อักขระที่เป็นช่องว่าง </font><br><br></li>
+			<li><font color="black" size="4">ชุดอักขระเพื่อการประมวลผล แบ่งเป็น อักขระที่เป็นค่าว่าง และ อักขระควบคุม ค่าคงที่  คือ ข้อมูลจะคงอยู่ตลอดการทํางานของโปรแกรม ไม่สามารถเปลี่ยนแปลงค่าได้ </font><br><br></li>
+		</ol>
+<b><font color="black" size="4">กฎการตั้งชื่อตัวแปร </b></font><br>
+		<ol type="1">			
+			<li><font color="black" size="4">ชื่อตัวแปร สามารถตั้งชื่อได้ด้วยการนําตัวอักขระ ตัวเลข รวมถึงการนําเครื่องหมายอันเดอร์สกอร์ (Underscore) มาใช้แต่มีข้อแม้ว่า ตัวอักขระตัวแรกต้องเป็นตัวอักษรเท่านั้น อย่างไรก็ตามเครื่องหมาย อันเดอร์สกอร์ (Underscore) จะถือว่าเป็นตัวอักษรตัวหน่งึ จึงสามารถนํามาตั้งชื่อตัวแปรตัวแรกได้ </font><br><br></li>
+			<li><font color="black" size="4">ตัวอักษรตัวพิมพ์ใหญ่และตัวอักษรตัวพิมพ์เล็ก ในภาษาซีถือว่ามีความแตกต่างกัน</font><br><br></li>
+			<li><font color="black" size="4">ชื่อตัวแปรต้องไม่ตรงกับคําเฉพาะ </font><br><br></li>
+			<li><font color="black" size="4">ชื่อตัวแปรสามารถมีความยาวได้ 31 ตัวอักษร ตามมาตรฐาน ANSI C</font><br><br></li>		
+			<li><font color="black" size="4">ชื่อตัวแปรไม่อนุญาตให้มีช่องว่าง แต่ถ้าต้องการแยกคํา สามารถใช้เครื่องหมายอันเดอร์สกอร์ (Underscore) ช่วยได้ </font><br><br></li>
+			<li><font color="black" size="4">ควรตตั้งชื่อตัวแปรให้สื่อความหมาย เพื่อคาดเดาได้ว่าชื่อตัวแปรดังกล่าวนําไปใช้เพื่อการใด</font><br><br></li>
+		</ol>
+<b><font color="black" size="5">คําเฉพาะ </b></font><br>
+<font color="black" size="4">คือ คําที่ถูกสงวนไว้ใช้งานในคอมไพเลอร์ไม่สามารถนําคําเฉพาะเหล่านั้นไปใช้เพื่อตั้งชื่อ ตัวแปรได้ </font><br><br>
+<b><font color="black" size="5">นิพจน์และตัวดําเนินการ </b></font><br>
+<font color="black" size="4">นิพจน์ในภาษาซีสามารถพบเห็นได้จากสูตรการคํานวณตัวเลขต่าง ๆ และ ตัว ดําเนินการในภาษาซีที่สําคัญ เช่น ตัว ดําเนินการทางคณิตศาสตร์ตัวดําเนินการยูนารีตัวดําเนินการ เปรียบเทียบตรรกะ ตัวดําเนินการระดับบิต ตัวดําเนินการกําหนดค่า และตัวดําเนินการเงื่อนไข</font><br><br>
+<b><font color="black" size="5">โปรแกรม Dev–Cpp เวอร์ชัน 5.4.1</b></font><br>
+<font color="black" size="4">สามารถนํามาเขียนภาษาซีและ ภาษา C++ ได้ซึ่งโปรแกรม มีลักษณะเด่นคือ มีขนาดเล็กเมื่อเทียบกับโปรแกรม NetBeans, Visual ทํางานรวดเร็ว มีประสิทธิภาพ เหมาะ กับการนํามาใช้เพื่อฝึกหัดเขียนโปรแกรมได้เป็นอย่างดีเนื่องจากติดตั้งง่าย ใช้งานสะดวก สามารถหา ดาวน์โหลดมาใช้งานได้จากอินเทอร์เน็ต </font><br><br>
+<b><font color="black" size="5">ชนิดของข้อผิดพลาด </b></font><br>
+		<ol type="1">
+			<li><font color="black" size="4">ข้อผิดพลาดที่เกิดจากไวยากรณ์ (Syntax Errors) </font><br><br></li>
+			<li><font color="black" size="4">ข้อผิดพลาดที่เกิดจากตรรกะโปรแกรม (Logic Errors)  </font><br><br></li>
+			<li><font color="black" size="4">ข้อผิดพลาดในขณะรันโปรแกรม (Runtime Errors)  </font><br><br></li>
+		</ol>
+<center><img src="E:\Website-ฑิฆัมพร\images\ภาษาซี.jpg"align="bottom" height="250" width="350"></center><br><br>
+</body>
+</html>
